@@ -16,6 +16,10 @@ function App() {
     console.log("SSR:", import.meta.env.SSR);
   }
 
+  //Variáveis de Ambiente Personalizados Vite
+  console.log(import.meta.env.VITE_API_URL);
+  console.log(import.meta.env.VITE_DB_PASSWORD);
+
   return (
     <>
       <section id="center">
