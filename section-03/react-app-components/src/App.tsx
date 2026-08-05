@@ -1,12 +1,14 @@
 import "./App.css";
 import Profile from "./components/Profile";
+import { HardSkills } from "./components/HardSkills";
 
 function App() {
   return (
-    <div>
+    <>
+      <HardSkills />
       <h1>Hellow World</h1>
       <Profile />
-    </div>
+    </>
   );
 }
 
