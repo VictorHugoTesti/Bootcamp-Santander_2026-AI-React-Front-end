@@ -1,12 +1,14 @@
-import './App.css'
-import { List } from './components/List'
+import "./App.css";
+import { MarketImage } from "./components/MArketImage.tsx";
+import { List } from "./components/List.tsx";
 
 function App() {
-
   return (
-    <List />
-  )
+    <>
+      <MarketImage />
+      <List />
+    </>
+  );
 }
 
-export default App
-  
+export default App;
