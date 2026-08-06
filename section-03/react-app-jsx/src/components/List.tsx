@@ -1,6 +1,9 @@
 
 export function List() {
-  const name = "Victor"
+  const ListDetails = {
+    name: 'Victor',
+    day: formatDate(new Date())
+  }
 
   function formatDate(date: Date): React.ReactNode {
     const formatedDate = new Intl.DateTimeFormat (
@@ -14,9 +17,9 @@ export function List() {
 
   return (
     <>
-      <h1>Feria | Lista de Compras do {name}</h1>
-      <p><b>Dia de Feira:</b> {formatDate(new Date())}</p>
-      <ul>
+      <h1>Feria | Lista de Compras do {ListDetails.name}</h1>
+      <p><b>Dia de Feira:</b> {formatDate(new Date()) /* {ListDetails.day} */}</p>
+      <ul style={{ color: 'purple', backgroundColor: 'gray', textAlign: 'left' }}>
         <li>Banana</li>
         <li>Maça</li>
         <li>Alface</li>
