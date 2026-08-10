@@ -22,3 +22,24 @@
 .recipe-description {
   font-size: 1rem;
 }
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  width: 300px;
+  min-height: 300px;
+  padding: 24px;
+}
+
+.button {
+  background-color: brown;
+  color: white;
+  margin-top: 24px;
+}

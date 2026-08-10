@@ -1,10 +1,23 @@
-import type { CoffeeProps } from "../interfaces/Coffe";
-import { Coffee } from "./Coffee";
+import type { PropsWithChildren } from "react";
+import "../App.css";
 
-export function Recipe(props: CoffeeProps) {
+interface Props {
+  onClick?: () => void;
+}
+
+export function Recipe({ children, onClick }: PropsWithChildren<Props>) {
+  function handleClick() {
+    if (onClick) {
+      onClick();
+    }
+  }
+
   return (
-    <>
-      <Coffee {...props} />
-    </>
+    <div className="card">
+      {children}
+      <button onClick={handleClick} className="button">
+        Ver Receita
+      </button>
+    </div>
   );
 }
