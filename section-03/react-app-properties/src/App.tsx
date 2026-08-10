@@ -14,6 +14,7 @@ function App() {
           description: "Rico e com toque de baunilha",
           prepareTime: 5
         }}
+        imageSIZE={300}
       />
       <Recipe
         imageSRC={vite}
