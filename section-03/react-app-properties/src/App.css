@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.recipe-title, .recipe-description {
+  margin: 0;
+}
+
+.recipe-title {
+  font-size: 1.3rem;
+  margin-top: 24px;
+}
+
+.recipe-description {
+  font-size: 1rem;
+}
