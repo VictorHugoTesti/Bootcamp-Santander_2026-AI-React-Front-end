@@ -1,4 +1,7 @@
 import "./App.css";
+import Copyright from "./components/InspirationApp/Copyright";
+import FancyText from "./components/InspirationApp/FancyText";
+import InspirationGenerator from "./components/InspirationApp/InspirationGenerator";
 import Item from "./components/Item";
 
 const itemsList = [
@@ -12,21 +15,29 @@ const itemsList = [
 
 function App() {
   return (
-    <div className="list">
-      <h1>Itens da Mala</h1>
-      {itemsList.map((item) => {
-        //if (item.check) return null;
+    <>
+      <div className="list">
+        <h1>Itens da Mala</h1>
+        {itemsList.map((item) => {
+          //if (item.check) return null;
 
-        return (
-          <Item
-            key={item.id}
-            name={item.name}
-            check={item.check}
-            count={item.count}
-          />
-        );
-      })}
-    </div>
+          return (
+            <Item
+              key={item.id}
+              name={item.name}
+              check={item.check}
+              // count={item.count}
+            />
+          );
+        })}
+      </div>
+      <div>
+        <FancyText title text="Get Inspired App"/>
+        <InspirationGenerator>
+          <Copyright year={2026} />
+        </InspirationGenerator>
+      </div>
+    </>
   );
 }
 
