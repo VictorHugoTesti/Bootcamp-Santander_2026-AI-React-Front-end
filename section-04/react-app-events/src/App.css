@@ -1,5 +1,32 @@
 .button {
   background-color: blue;
-  color: rgba(255, 255, 255, .85);
+  color: rgba(255, 255, 255, 0.85);
   margin: 0 1rem;
+}
+
+.dark-theme {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.light-theme {
+  background-color: white;
+  color: #242424;
+}
+
+.post {
+  background-color: #f2f2f2;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.post img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.post,
+.post img {
+  width: 300px;
+  border-radius: 8px;
 }
