@@ -1,7 +1,9 @@
 
 import './App.css'
+import ClientsListWithData from './components/ClientsList'
 import CounterClassComponent from './components/CounterClassComponent'
 import CounterFunctionalComponent from './components/CouterFunctionalComponent'
+import ProductsListWithData from './components/ProductsList'
 import ProductsList from './components/ProductsList'
 
 function App() {
@@ -13,7 +15,9 @@ function App() {
         <CounterClassComponent message='Class Component'/>
       </div>
       <div>
-        <ProductsList />
+        {/* <ProductsList /> */}
+        <ClientsListWithData />
+        <ProductsListWithData />
       </div>
     </>
   )
