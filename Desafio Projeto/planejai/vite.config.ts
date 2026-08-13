@@ -1,7 +1,6 @@
-import path from 'node:path'
-
-import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -12,7 +11,3 @@ export default defineConfig({
     },
   },
 })
-function tailwindCSS(): import("vite").PluginOption {
-  throw new Error('Function not implemented.')
-}
-

@@ -1,7 +1,7 @@
 import { Clock, TrendingUp, Wallet } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
-import { Button } from './button' 
+import { Button } from './Button'
 
 export function Header() {
   const navigate = useNavigate()
