@@ -1,21 +1,14 @@
-import {
-  CalendarClock,
-  CreditCard,
-  Goal,
-  Landmark,
-  PiggyBank,
-  Wallet,
-} from 'lucide-react'
+import { CalendarClock, CreditCard, Goal, Landmark, PiggyBank, Wallet } from 'lucide-react'
 
 import type { FormStepProps } from '../components/features/Simulation/FormStep'
+import type { InsightData } from '@/services/aiService'
 
 export const simulationFormSteps = [
   {
     id: 'income',
     icon: PiggyBank,
     title: 'Renda mensal bruta',
-    question:
-      'Quanto é depositado na sua conta todo mês (somando todas as fontes)?',
+    question: 'Quanto é depositado na sua conta todo mês (somando todas as fontes)?',
     inputProps: {
       placeholder: 'ex: 5.000,00',
       prefix: 'R$',
@@ -26,8 +19,7 @@ export const simulationFormSteps = [
     id: 'expenses',
     icon: CreditCard,
     title: 'Custos fixos de vida',
-    question:
-      'Quanto você gasta mensalmente com custos fixos (aluguel, contas, etc)?',
+    question: 'Quanto você gasta mensalmente com custos fixos (aluguel, contas, etc)?',
     inputProps: {
       placeholder: 'ex: 2.000,00',
       prefix: 'R$',
@@ -38,8 +30,7 @@ export const simulationFormSteps = [
     id: 'debts',
     icon: Landmark,
     title: 'Dívidas / parcelas',
-    question:
-      'Você tem algum valor comprometido com parcelas ou empréstimos mensalmente?',
+    question: 'Você tem algum valor comprometido com parcelas ou empréstimos mensalmente?',
     inputProps: {
       placeholder: 'ex: 500,00',
       prefix: 'R$',
@@ -86,9 +77,9 @@ export const simulationFormSteps = [
   },
 ] satisfies FormStepProps[]
 
-export type SimulationFormData = Record<
-  (typeof simulationFormSteps)[number]['id'],
-  string
->
+export type SimulationFormData = Record<(typeof simulationFormSteps)[number]['id'], string>
 
-export type SimulationRecord = SimulationFormData & { id: string }
+export type SimulationRecord = SimulationFormData & {
+  id: string
+  insight?: InsightData
+}
