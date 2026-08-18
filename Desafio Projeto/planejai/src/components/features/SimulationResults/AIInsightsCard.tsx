@@ -3,6 +3,7 @@ import Skeleton from 'react-loading-skeleton'
 import { useInsight } from '@/hooks/useInsight'
 import { Error } from '../Insights/Error'
 import { Content } from '../Insights/Content'
+import { Chat } from '../Insights/Chat'
 
 interface AIInsightCardProps {
   simulationId: string
@@ -13,7 +14,7 @@ export function AIInsightsCard({ simulationId }: AIInsightCardProps) {
     useInsight(simulationId)
 
   return (
-    <div className="bg-card order-2 rounded-2xl p-6 shadow-[4px_4px_18px_0px_rgba(0,0,0,0.2)] lg:order-1 lg:col-span-2">
+    <div className="bg-card order-2 flex flex-col rounded-2xl p-6 shadow-[4px_4px_18px_0px_rgba(0,0,0,0.2)] lg:order-1 lg:col-span-2">
       <div className="mb-3 flex items-center gap-1.5">
         <span>✨</span>
         <span className="text-primary text-xs font-semibold tracking-widest uppercase">
@@ -33,6 +34,7 @@ export function AIInsightsCard({ simulationId }: AIInsightCardProps) {
           />
         </div>
       )}
+      
       {!isLoading && error && (
         <Error
           simulationId={simulationId}
@@ -40,7 +42,13 @@ export function AIInsightsCard({ simulationId }: AIInsightCardProps) {
           onRetry={() => fetchInsight(simulationId)}
         />
       )}
-      {!isLoading && insight && <Content insight={insight} />}
+      
+      {!isLoading && insight && (
+        <>
+          <Content insight={insight} />
+          <Chat simulationId={simulationId} />
+        </>
+      )}
     </div>
   )
 }
